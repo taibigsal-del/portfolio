@@ -366,14 +366,12 @@ mark.hl{color:inherit;background:linear-gradient(transparent 52%,#FFD978 52%,#FF
 @media (prefers-reduced-motion:reduce){mark.hl{animation:none;background-size:100% 100%}}
 @media print{mark.hl{animation:none;background-size:100% 100%}}
 .mc{position:relative}
-.stkw{position:absolute;right:-6px;top:30px;z-index:3;filter:drop-shadow(0 10px 12px rgba(0,0,0,.25)) drop-shadow(0 1px 1px rgba(0,0,0,.08));transform:rotate(-3deg)}
-.stk{display:grid;justify-items:center;white-space:nowrap;background:linear-gradient(135deg,#F7A23B,#F04E23);color:#fff;padding:6px 20px 8px;border-radius:10px;
--webkit-mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient(circle at 100% 50%,transparent 7px,#000 7.5px);-webkit-mask-composite:source-in;
-mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient(circle at 100% 50%,transparent 7px,#000 7.5px);mask-composite:intersect}
+.stkw{position:absolute;right:-6px;top:30px;z-index:3;filter:drop-shadow(0 8px 12px rgba(0,0,0,.2)) drop-shadow(0 1px 1px rgba(0,0,0,.08));transform:rotate(3deg)}
+.stk{display:grid;justify-items:stretch;white-space:nowrap;background:#fff;border-radius:10px;overflow:hidden;text-align:center;box-shadow:0 0 0 1px rgba(0,0,0,.04);width:clamp(66px,6.3vw,78px)}
 .stk{position:relative}
-.stk small{font-size:clamp(10px,.95vw,12px);font-weight:700;color:#FFE9D6;letter-spacing:.06em}
-.stk b{font-size:clamp(20px,2.3vw,27px);font-weight:900;font-style:italic;font-synthesis:style;color:#fff;letter-spacing:-.02em;line-height:1;padding:1px 4px 0 2px}
-.mc:nth-child(2) .stkw{transform:rotate(2deg)}.mc:nth-child(3) .stkw{transform:rotate(-2deg)}.mc:nth-child(4) .stkw{transform:rotate(3deg)}
+.stk small{font-size:clamp(9px,.82vw,10.5px);font-weight:700;color:#fff;background:linear-gradient(135deg,#F7A23B,#F04E23);padding:2px 4px;letter-spacing:.02em}
+.stk b{font-size:clamp(16px,1.85vw,21px);font-weight:900;font-style:italic;font-synthesis:style;color:#1A1A1A;letter-spacing:-.01em;line-height:1;padding:4px 6px 6px 4px}
+.mc:nth-child(2) .stkw{transform:rotate(2deg)}.mc:nth-child(3) .stkw{transform:rotate(2.5deg)}.mc:nth-child(4) .stkw{transform:rotate(3.5deg)}
 @keyframes stkPop{from{opacity:0;translate:0 -10px;scale:.85}to{opacity:1;translate:0 0;scale:1}}
 @media (prefers-reduced-motion:reduce){.stkw{animation:none}}
 .mc-a{font-size:clamp(14px,1.6vw,19px);font-weight:900;display:block}
@@ -443,7 +441,7 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
 .nb-h b{font-weight:900}
 .nb-h i{font-style:normal;font-size:.85em;color:#8A8A8A;white-space:nowrap}
 .nb p{margin:1px 0 0}
-@media (prefers-reduced-motion:reduce){.nb{transition:none}}
+@media (prefers-reduced-motion:reduce){.nb{transition:opacity .4s ease;transform:none}}
 
 .shot{position:absolute;left:0;right:0;top:132px;bottom:0;margin:0;display:flex;align-items:flex-start;justify-content:center;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .55s,filter .55s}
 .shot img{max-width:100%;max-height:100%;width:auto;height:auto;border-radius:16px;box-shadow:0 20px 40px -18px rgba(0,0,0,.4),0 2px 6px rgba(0,0,0,.08);background:#fff}
@@ -595,13 +593,31 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
 @keyframes jmFlash{0%,100%{box-shadow:0 0 0 0 rgba(240,78,35,0)}25%{box-shadow:0 0 0 4px rgba(240,78,35,.45)}}
 .p2mh{display:none}.p2mnote{display:none}@media (max-width:1120px){.p2mh{display:flex;align-items:center;gap:10px;margin:6px 0 -6px;font-size:18px;font-weight:900;color:var(--ink);align-self:stretch}.p2mh::before{content:"";width:5px;height:20px;border-radius:1px;background:#904818}.p2mnote{display:block;margin:-14px 0 0;font-size:13px;font-weight:700;color:#5A5A5A;align-self:stretch}}
 
-@media (max-width:1120px){#v-app .mc:nth-child(3) .stkw{top:42px;transform:rotate(3deg)}#v-app .mc:nth-child(4) .stkw{top:12px}}
-.mbr{display:none}@media (max-width:620px){main.view{padding-bottom:36px}.nextprev{gap:10px}.nextprev a{padding:12px 12px;font-size:12px}.nextprev a b{font-size:13px;white-space:nowrap;letter-spacing:-.02em}.mbr{display:inline}.jhead,.home-head{margin-top:14px}.chv{height:42px}.chv b{font-size:15px}.cols p{font-size:11.5px}.chip.big{font-size:13.5px;padding:5px 14px}.card h3{font-size:15px}.jhead h1,.home-head h1{font-size:24px;line-height:1.4;margin:10px 0 6px}.jres{font-size:15.5px}.ptag b{font-size:15px;height:30px}.ptag i{font-size:38px}.hltag{font-size:15px}}
+
+.mbr{display:none}@media (max-width:620px){.bar-top .wrap{gap:8px}.brand{font-size:16px;gap:6px}.brand .members{width:28px}.pager{gap:4px}.pager a{width:28px;height:28px;font-size:13px}.lang{margin-left:4px;height:28px;min-width:34px;padding:0 8px;font-size:12px}main.view{padding-bottom:36px}.nextprev{gap:10px}.nextprev a{padding:12px 12px;font-size:12px}.nextprev a b{font-size:13px;white-space:nowrap;letter-spacing:-.02em}.mbr{display:inline}.jhead,.home-head{margin-top:14px}.chv{height:42px}.chv b{font-size:15px}.cols p{font-size:11.5px}.chip.big{font-size:13.5px;padding:5px 14px}.card h3{font-size:15px}.jhead h1,.home-head h1{font-size:24px;line-height:1.4;margin:10px 0 6px}.jres{font-size:15.5px}.ptag b{font-size:15px;height:30px}.ptag i{font-size:38px}.hltag{font-size:15px}}
+.bar-top .wrap{justify-content:flex-start}.bar-top .pager{margin-left:auto}.lang{margin-left:12px;flex:none;display:inline-grid;place-items:center;height:30px;min-width:40px;padding:0 10px;border-radius:999px;border:1.5px solid #904818;color:#904818;font-size:13px;font-weight:900;text-decoration:none;letter-spacing:.04em}.lang:hover{background:#904818;color:#fff}
+
+/* chevron B */
+.chevrons .chv{background:none;clip-path:none;--k:26px;padding:0 var(--k);margin-right:-10px;display:grid;place-items:center}.chevrons .chv:first-child{padding-left:0}
+.chevrons .chv:last-child{margin-right:0}
+.chv .bgw{position:absolute;inset:0;filter:url(#rnd)}
+.chv .bgw::before,.chv .bg{content:"";position:absolute;inset:0;clip-path:polygon(0 0,calc(100% - var(--k)) 0,100% 50%,calc(100% - var(--k)) 100%,0 100%,var(--k) 50%)}
+.chv .bgw::before{background:var(--d);transform:translateY(5px)}
+.chv .bg{background:var(--e)}
+.chv:first-child .bgw::before,.chv:first-child .bg{clip-path:polygon(0 0,calc(100% - var(--k)) 0,100% 50%,calc(100% - var(--k)) 100%,0 100%)}
+.chv .ct2{position:relative;display:flex;align-items:center;gap:8px}
+.chv .ct2 b{font-weight:900}
+.chv .ci{width:clamp(20px,2.3vw,28px);height:clamp(20px,2.3vw,28px);fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.chevrons{padding-bottom:5px}
+@media (max-width:1120px){.chevrons .chv{--k:14px;margin-right:-6px;padding:0 10px 0 12px}.chevrons .chv:first-child{padding-left:0}.chv .bgw::before{transform:translateY(3px)}.chv .ct2{gap:4px}.chv .ci{width:16px;height:16px;stroke-width:2.4}}
+@media (max-width:620px){.chv .ci{display:none}}
+@media (min-width:1121px){#v-home .cols{gap:0}#v-home .cols p{text-align:center;padding:0 26px;margin-right:-10px}#v-home .cols p:first-child{padding-left:0}#v-home .cols p:last-child{margin-right:0}}
+#v-rfm .c1 .cts .ct:nth-child(n+3){padding-top:14px}
 .p4note{margin:14px 4px 0}
 @media (max-width:1120px){.p4{aspect-ratio:auto;grid-template-columns:1fr;gap:22px;padding:16px}.sgs{grid-template-rows:none}.py{grid-template-rows:none}.pyl{min-height:96px}.p4c{max-width:560px;margin:0 auto;width:100%}}
 </style>
 </head>
-<body>
+<body><svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rnd"><feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/><feColorMatrix in="b" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 22 -10" result="g"/><feComposite in="SourceGraphic" in2="g" operator="atop"/></filter></svg>
 
 <header class="bar-top">
   <div class="wrap">
@@ -609,10 +625,11 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
     <nav class="pager" aria-label="作品頁">
       <a href="#home" data-v="home" aria-label="作品總覽">0</a>
       <a href="#journey" data-v="journey" aria-label="01 自動旅程腳本企劃">1</a>
-      <a href="#activation" data-v="activation" aria-label="02 會員活化操作">2</a>
-      <a href="#app" data-v="app" aria-label="03 APP 下載媒體策略">3</a>
+      <a href="#activation" data-v="activation" aria-label="02 分眾行銷操作">2</a>
+      <a href="#app" data-v="app" aria-label="03 APP 下載媒體企劃">3</a>
       <a href="#rfm" data-v="rfm" aria-label="04 RFM 策略規劃">4</a>
     </nav>
+    <a class="lang" href="en/index.html" aria-label="Switch to English">EN</a>
   </div>
 </header>
 
@@ -629,12 +646,12 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
     <div class="map">
       <div class="lrow first">
         <div class="chevrons">
-        <div class="chv" style="--c:#A65A26;--e:#904818;--d:#6E3610"><b>下載</b></div>
-        <div class="chv" style="--c:#F7663A;--e:#F04E23;--d:#C23A16"><b>首購</b></div>
-        <div class="chv" style="--c:#72C232;--e:#60B41E;--d:#47891A"><b>活躍</b></div>
-        <div class="chv" style="--c:#1DB5E0;--e:#00A8D8;--d:#0085AB"><b>沉睡</b></div>
+        <div class="chv" style="--c:#A65A26;--e:#904818;--d:#6E3610"><span class="bgw" aria-hidden="true"><span class="bg"></span></span><span class="ct2"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg><b>下載</b></span></div>
+        <div class="chv" style="--c:#F7663A;--e:#F04E23;--d:#C23A16"><span class="bgw" aria-hidden="true"><span class="bg"></span></span><span class="ct2"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><b>首購</b></span></div>
+        <div class="chv" style="--c:#72C232;--e:#60B41E;--d:#47891A"><span class="bgw" aria-hidden="true"><span class="bg"></span></span><span class="ct2"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.7-7 10-7 10z"/></svg><b>活躍</b></span></div>
+        <div class="chv" style="--c:#1DB5E0;--e:#00A8D8;--d:#0085AB"><span class="bgw" aria-hidden="true"><span class="bg"></span></span><span class="ct2"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></svg><b>沉睡</b></span></div>
       </div>
-        <span class="chip big">階段目標</span>
+        <span class="chip big">旅程階段目標</span>
         <div class="cols">
           <p>下載 APP</p>
           <p>新客首購</p>
@@ -652,12 +669,12 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
           </a>
           <a class="card c-auto" href="#activation" style="grid-column:2/5;grid-row:2">
             <span class="cno">02</span>
-            <div><h3>會員活化操作</h3><small class="rng">首購 → 沉睡</small><p>預算與資源分配，最大化會員數</p><span class="stg" role="img" aria-label="涵蓋階段：首購到沉睡"><i style="background:#E9E4DE"></i><i style="background:#F04E23"></i><i style="background:#60B41E"></i><i style="background:#00A8D8"></i></span></div>
+            <div><h3>分眾行銷操作</h3><small class="rng">首購 → 沉睡</small><p>預算與資源分配，最大化會員數</p><span class="stg" role="img" aria-label="涵蓋階段：首購到沉睡"><i style="background:#E9E4DE"></i><i style="background:#F04E23"></i><i style="background:#60B41E"></i><i style="background:#00A8D8"></i></span></div>
             <span class="go">查看 →</span>
           </a>
           <a class="card c-acq" href="#app" style="grid-column:1/2;grid-row:3;grid-template-columns:auto 1fr">
             <span class="cno">03</span>
-            <div><h3>APP 下載媒體策略</h3><small class="rng">下載</small><p>多維度拆解各媒體數據，深鑽成長破口</p><span class="stg" role="img" aria-label="涵蓋階段：下載"><i style="background:#904818"></i><i style="background:#E9E4DE"></i><i style="background:#E9E4DE"></i><i style="background:#E9E4DE"></i></span></div>
+            <div><h3>APP 下載媒體企劃</h3><small class="rng">下載</small><p>多維度拆解各媒體數據，深鑽成長破口</p><span class="stg" role="img" aria-label="涵蓋階段：下載"><i style="background:#904818"></i><i style="background:#E9E4DE"></i><i style="background:#E9E4DE"></i><i style="background:#E9E4DE"></i></span></div>
             <span class="go">查看 →</span>
           </a>
           <a class="card c-act" href="#rfm" style="grid-column:3/5;grid-row:4">
@@ -720,14 +737,14 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
           <div class="an-t"><b><mark class="hl">分群流動</mark></b><span class="ccl">vs 上月</span></div>
           <div class="dgrp"><div class="dpair"><svg viewBox="0 0 140 196" role="img" aria-label="各重點分群新增與流失人數，重要深耕流失遠高於新增"><text x="70.0" y="11" class="mh">新增 &amp; 流失</text><rect x="10" y="86.2" width="12" height="73.8" rx="3" fill="#60B41E"/><rect x="23" y="82.4" width="12" height="77.6" rx="3" fill="#C8E6A8"/><text x="22.5" y="176" class="ms">金字塔</text><rect x="42" y="86.2" width="12" height="73.8" rx="3" fill="#60B41E"/><rect x="55" y="66.8" width="12" height="93.2" rx="3" fill="#C8E6A8"/><text x="54.5" y="172" class="ms">重要<tspan x="54.5" dy="9">喚醒</tspan></text><rect x="74" y="125.1" width="12" height="34.9" rx="3" fill="#60B41E"/><rect x="87" y="28.0" width="12" height="132.0" rx="3" fill="#C8E6A8"/><text x="86.5" y="172" class="ms">重要<tspan x="86.5" dy="9">深耕</tspan></text><rect x="106" y="31.9" width="12" height="128.1" rx="3" fill="#60B41E"/><rect x="119" y="51.3" width="12" height="108.7" rx="3" fill="#C8E6A8"/><text x="118.5" y="172" class="ms">沉睡<tspan x="118.5" dy="9">用戶</tspan></text></svg><svg viewBox="0 0 140 196" role="img" aria-label="重點分群遷移矩陣，金字塔有部分會員掉到重要喚醒"><text x="70.0" y="11" class="mh">分群遷移</text><text x="52.75" y="47" class="ms">金字塔</text><text x="76.25" y="43" class="ms">重要<tspan x="76.25" dy="9">喚醒</tspan></text><text x="99.75" y="43" class="ms">重要<tspan x="99.75" dy="9">深耕</tspan></text><text x="123.25" y="43" class="ms">沉睡<tspan x="123.25" dy="9">用戶</tspan></text><text x="38" y="70.2" class="ms me">金字塔</text><rect x="42.0" y="56.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.71)"/><rect x="65.5" y="56.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.33)"/><rect x="89.0" y="56.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.12)"/><rect x="112.5" y="56.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.07)"/><text x="38" y="93.8" class="ms me">重要喚醒</text><rect x="42.0" y="79.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.25)"/><rect x="65.5" y="79.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.47)"/><rect x="89.0" y="79.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.10)"/><rect x="112.5" y="79.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.07)"/><text x="38" y="117.2" class="ms me">重要深耕</text><rect x="42.0" y="103.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.08)"/><rect x="65.5" y="103.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.09)"/><rect x="89.0" y="103.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.22)"/><rect x="112.5" y="103.0" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.09)"/><text x="38" y="140.8" class="ms me">沉睡用戶</text><rect x="42.0" y="126.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.07)"/><rect x="65.5" y="126.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.08)"/><rect x="89.0" y="126.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.10)"/><rect x="112.5" y="126.5" width="21.5" height="21.5" rx="3" fill="rgba(80,160,26,0.84)"/><rect x="40.5" y="78.0" width="24.5" height="24.5" rx="4" fill="none" stroke="#FFC21A" stroke-width="1.8" stroke-dasharray="3 2"/></svg></div><div class="dleg"><span><i style="background:#60B41E"></i>新增</span><span><i style="background:#C8E6A8"></i>流失</span><span><i class="dash"></i>流失熱點</span></div></div>
         </div>
-        <div class="prio4"><b><mark class="hl">Next step 行動建議</mark></b>
+        <div class="prio4"><b><mark class="hl">Next step 示意</mark></b>
           <div class="chain"><span>搶救<br>重要喚醒</span><i>›</i><span>積極轉化<br>中堅斷層</span><i>›</i><span>鞏固<br>金字塔續留</span></div>
         </div>
       </section>
     </div>
     <p class="note p4note">註：為保護資料，本頁數字與圖表皆為示意，僅呈現分析架構與趨勢方向；色階代表各群相對高低。</p>
 
-    <div class="nextprev"><a href="#app">← 上一個作品<b>03 APP 下載媒體策略</b></a><a href="#home">回到首頁 →<b>作品總覽</b></a></div>
+    <div class="nextprev"><a href="#app">← 上一個作品<b>03 APP 下載媒體企劃</b></a><a href="#home">回到首頁 →<b>作品總覽</b></a></div>
   </div>
 </main>
 
@@ -735,13 +752,13 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
 <main id="v-app" class="view">
   <div class="wrap work">
     <div class="jhead">
-      <div class="ptag"><i>03</i><b>APP 下載媒體策略</b></div>
+      <div class="ptag"><i>03</i><b>APP 下載媒體企劃</b></div>
       <h1>多維度拆解各媒體數據，<br class="mbr">深鑽成長破口</h1>
       <p class="jres"><span class="ri">月均下載<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="提升"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>17%</em>、</span><span class="ri muted">費用<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="增加"><circle cx="12" cy="12" r="11" fill="#7D7670"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>3%</em>，</span><span class="ri">CPI<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="下降"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 7v10m-4.5-4.5L12 17l4.5-4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>4 元</em></span></p>
     </div>
 
-    <div class="p3"><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><img src="img/logo_google.png" alt=""></i>Google</span><span class="mc-fmt">UAC 影片廣告</span></div><span class="stkw"><span class="stk" aria-label="互動率 +80%"><small>互動率</small><b>+80%</b></span></span><div class="mc-v"><video class="mc-video" src="img/p3_google.mp4" poster="img/p3_google_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="momo × 麥當勞 天天狂饗節 YouTube 廣告影片"></video></div><div class="mc-t"><b class="mc-a">YouTube <mark class="hl">自製影片</mark>大幅提升曝光量</b></div></article><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><img src="img/logo_fb.png" alt=""></i>Facebook</span><span class="mc-fmt">目錄廣告</span></div><span class="stkw"><span class="stk" aria-label="CTR 3.2% →5.7%"><small>CTR 3.2% →</small><b>5.7%</b></span></span><div class="mc-v"><img class="mc-img sh" src="img/p3_fb_pair.png" alt="Facebook 廣告貼文：APP 開工優惠文案與目錄廣告商品輪播"></div><div class="mc-t"><b class="mc-a">目錄廣告搭配<mark class="hl">全新受眾</mark>突破量體受限</b></div></article><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><img src="img/logo_apple.png" alt=""></i>Apple Search Ads</span><span class="mc-fmt">商店預覽圖</span></div><span class="stkw"><span class="stk" aria-label="轉換率 +13%"><small>轉換率</small><b>+13%</b></span></span><div class="mc-v"><img class="mc-img" src="img/p3_asa.jpg" alt="App Store 前三屏帶誘因預覽圖"></div><div class="mc-t"><b class="mc-a">前 3 屏新增<mark class="hl">帶誘因</mark>預覽圖</b></div></article><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#E5007F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18"/><circle cx="6" cy="6.3" r=".5"/><circle cx="8" cy="6.3" r=".5"/><path d="M7 12.5h6M7 15.5h10"/></svg></i>自媒體</span><span class="mc-fmt">橫向拓展曝光渠道</span></div><span class="stkw"><span class="stk" aria-label="自主下載誘因提升"><small>自主下載誘因</small><b>UP</b></span></span><div class="mc-v"><div class="own"><img class="own-hero" src="img/p3_own_hero.jpg" alt="momo APP 下載過水頁：立即下載 APP 在手生活在走"><div class="mq r1"><div class="mq-track"><span class="b" style="margin-right:46px"># 限時搶購真的有好康</span><span class="w" style="margin-right:88px"># 效率好得沒話說</span><span class="b" style="margin-right:30px"># 生活的好夥伴</span><span class="w" style="margin-right:120px"># 全方位的購物天堂</span><span class="b" style="margin-right:64px"># 每天簽到已經成為日常</span><span class="w" style="margin-right:96px"># 只對momo品質有信心</span><span class="b" style="margin-right:46px"># 限時搶購真的有好康</span><span class="w" style="margin-right:88px"># 效率好得沒話說</span><span class="b" style="margin-right:30px"># 生活的好夥伴</span><span class="w" style="margin-right:120px"># 全方位的購物天堂</span><span class="b" style="margin-right:64px"># 每天簽到已經成為日常</span><span class="w" style="margin-right:96px"># 只對momo品質有信心</span></div></div><div class="mq r2"><div class="mq-track"><span class="b" style="margin-right:46px"># 一站購足超方便</span><span class="w" style="margin-right:88px"># 網購首選</span><span class="b" style="margin-right:30px"># 目前用過最好用的購物平台</span><span class="w" style="margin-right:120px"># 第一次使用就上手</span><span class="b" style="margin-right:64px"># 比完價都是在這邊買</span><span class="b" style="margin-right:96px"># 一站購足超方便</span><span class="w" style="margin-right:46px"># 網購首選</span><span class="b" style="margin-right:88px"># 目前用過最好用的購物平台</span><span class="w" style="margin-right:30px"># 第一次使用就上手</span><span class="b" style="margin-right:120px"># 比完價都是在這邊買</span></div></div></div></div><div class="mc-t"><b class="mc-a">新創<mark class="hl">首登禮</mark>活動、優化<mark class="hl">過水頁</mark>視覺</b></div></article></div>
-    <div class="nextprev"><a href="#activation">← 上一個作品<b>02 會員活化操作</b></a><a href="#rfm">下一個作品 →<b>04 RFM 策略規劃</b></a></div>
+    <div class="p3"><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><img src="img/logo_google.png" alt=""></i>Google</span><span class="mc-fmt">UAC 影片廣告</span></div><span class="stkw"><span class="stk" aria-label="互動率 +80%"><small>互動率</small><b>+80%</b></span></span><div class="mc-v"><video class="mc-video" src="img/p3_google.mp4" poster="img/p3_google_poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="momo × 麥當勞 天天狂饗節 YouTube 廣告影片"></video></div><div class="mc-t"><b class="mc-a">YouTube <mark class="hl">自製影片</mark>大幅提升曝光量</b></div></article><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><img src="img/logo_fb.png" alt=""></i>Facebook</span><span class="mc-fmt">目錄廣告</span></div><span class="stkw"><span class="stk" aria-label="CTR 3.2% 到 5.7%"><small>CTR 3.2% →</small><b>5.7%</b></span></span><div class="mc-v"><img class="mc-img sh" src="img/p3_fb_pair.png" alt="Facebook 廣告貼文：APP 開工優惠文案與目錄廣告商品輪播"></div><div class="mc-t"><b class="mc-a">目錄廣告搭配<mark class="hl">全新受眾</mark>突破量體受限</b></div></article><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><img src="img/logo_apple.png" alt=""></i>Apple Search Ads</span><span class="mc-fmt">商店預覽圖</span></div><span class="stkw"><span class="stk" aria-label="轉換率 +13%"><small>轉換率</small><b>+13%</b></span></span><div class="mc-v"><img class="mc-img" src="img/p3_asa.jpg" alt="App Store 前三屏帶誘因預覽圖"></div><div class="mc-t"><b class="mc-a">前 3 屏新增<mark class="hl">帶誘因</mark>預覽圖</b></div></article><article class="mc"><div class="mc-h"><span class="mc-chip"><i class="lg"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#E5007F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18"/><circle cx="6" cy="6.3" r=".5"/><circle cx="8" cy="6.3" r=".5"/><path d="M7 12.5h6M7 15.5h10"/></svg></i>自媒體</span><span class="mc-fmt">橫向拓展曝光渠道</span></div><span class="stkw"><span class="stk" aria-label="自主下載誘因提升"><small>自主下載誘因</small><b>UP!</b></span></span><div class="mc-v"><div class="own"><img class="own-hero" src="img/p3_own_hero.jpg" alt="momo APP 下載過水頁：立即下載 APP 在手生活在走"><div class="mq r1"><div class="mq-track"><span class="b" style="margin-right:46px"># 限時搶購真的有好康</span><span class="w" style="margin-right:88px"># 效率好得沒話說</span><span class="b" style="margin-right:30px"># 生活的好夥伴</span><span class="w" style="margin-right:120px"># 全方位的購物天堂</span><span class="b" style="margin-right:64px"># 每天簽到已經成為日常</span><span class="w" style="margin-right:96px"># 只對momo品質有信心</span><span class="b" style="margin-right:46px"># 限時搶購真的有好康</span><span class="w" style="margin-right:88px"># 效率好得沒話說</span><span class="b" style="margin-right:30px"># 生活的好夥伴</span><span class="w" style="margin-right:120px"># 全方位的購物天堂</span><span class="b" style="margin-right:64px"># 每天簽到已經成為日常</span><span class="w" style="margin-right:96px"># 只對momo品質有信心</span></div></div><div class="mq r2"><div class="mq-track"><span class="b" style="margin-right:46px"># 一站購足超方便</span><span class="w" style="margin-right:88px"># 網購首選</span><span class="b" style="margin-right:30px"># 目前用過最好用的購物平台</span><span class="w" style="margin-right:120px"># 第一次使用就上手</span><span class="b" style="margin-right:64px"># 比完價都是在這邊買</span><span class="b" style="margin-right:96px"># 一站購足超方便</span><span class="w" style="margin-right:46px"># 網購首選</span><span class="b" style="margin-right:88px"># 目前用過最好用的購物平台</span><span class="w" style="margin-right:30px"># 第一次使用就上手</span><span class="b" style="margin-right:120px"># 比完價都是在這邊買</span></div></div></div></div><div class="mc-t"><b class="mc-a">新創<mark class="hl">首登禮</mark>活動、優化<mark class="hl">過水頁</mark>視覺</b></div></article></div>
+    <div class="nextprev"><a href="#activation">← 上一個作品<b>02 分眾行銷操作</b></a><a href="#rfm">下一個作品 →<b>04 RFM 策略規劃</b></a></div>
   </div>
 </main>
 
@@ -749,7 +766,7 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
 <main id="v-activation" class="view">
   <div class="wrap work">
     <div class="jhead">
-      <div class="ptag"><i>02</i><b>會員活化操作</b></div>
+      <div class="ptag"><i>02</i><b>分眾行銷操作</b></div>
       <h1>預算與資源分配，最大化會員數</h1>
       <p class="jres"><span class="ri">行銷預算 YOY<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="減少"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 7v10m-4.5-4.5L12 17l4.5-4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>15%</em>，</span><span class="ri">喚回 1 年以上未購人數<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="提升"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>32%</em></span></p>
     </div>
@@ -761,7 +778,7 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
       <h3 class="p2mh">操作策略</h3><button type="button" class="tac" data-seg="buy" style="left:39.636%;top:13.864%;width:22.727%;height:auto;--col:#60B41E"><span class="tac-hl">刺激有購</span><span class="tac-t">隱藏賣場、滿額贈</span><span class="tac-p">主動邀請熱銷/季節品合作隱藏賣場<br>或設計滿額登記送活動<br><b>短時間衝高有購數/業績</b></span><span class="tac-k">淨 CVR<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="提升"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>62%</em></span></button><button type="button" class="tac" data-seg="win" style="left:46.909%;top:40.000%;width:22.727%;height:auto;--col:#00A8D8"><span class="tac-hl">流失挽回</span><span class="tac-t">直歸短效期 mo 幣</span><span class="tac-p">A/B Test 高效益名單/誘因/文案/渠道<br>持續新增 CDP 標籤<br><b>精準溝通、降低 CPA</b></span><span class="tac-k">花費<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="下降"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 7v10m-4.5-4.5L12 17l4.5-4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>15%</em><span class="kgap"></span>喚回數<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="提升"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>32%</em></span></button><button type="button" class="tac" data-seg="reach" style="left:52.364%;top:69.318%;width:22.727%;height:auto;--col:#0D4A80"><span class="tac-hl">擴大觸及</span><span class="tac-t">開發全新人群或場景</span><span class="tac-p">嘗試軟性溝通訊息<br>如問卷、公益、節慶問候<br>開發首頁個人化版位<br><b>破除觸及限制、深究流失要素</b></span><span class="tac-k">觸及數<svg class="upi" viewBox="0 0 24 24" role="img" aria-label="提升"><circle cx="12" cy="12" r="11" fill="#904818"/><path d="M12 17V7m-4.5 4.5L12 7l4.5 4.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><em>13%</em></span></button>
       <h3 class="p2mh">素材示意</h3><p class="p2mnote">*註：點擊會員分群可切換對應素材</p><div class="deck" style="left:74.545%;top:21.364%;width:21.091%;height:66.477%"><figure class="shot" data-seg="buy"><img src="img/p2_vip.png" alt="VIP 限定超低 5 折隱藏賣場活動頁"></figure><figure class="shot" data-seg="win"><img src="img/p2_coin.jpg" alt="新春秘密獻禮 $100 momo 幣已歸戶活動頁"></figure><figure class="shot" data-seg="reach"><img src="img/p2_survey.png" alt="momo 購物網客戶滿意度調查問卷活動頁"></figure><div class="nbs" aria-live="polite"><div class="nb" data-seg="buy" data-i="0"><span class="nb-ic sms" role="img" aria-label="簡訊"><svg viewBox="0 0 24 24"><path d="M12 5c-4.7 0-8 2.8-8 6.2 0 1.9 1 3.5 2.6 4.6L6 19l3.4-1.6c.8.2 1.7.3 2.6.3 4.7 0 8-2.8 8-6.3S16.7 5 12 5z" fill="#fff"/></svg><i>SMS</i></span><div><p>【momo】洗香香優惠秘密搶！香水沐浴露領券現省$700，澎澎、多芬、無患子獨享券32折up</p></div></div><div class="nb" data-seg="buy" data-i="1"><span class="nb-ic app" role="img" aria-label="APP 推播"><svg viewBox="0 0 24 24"><path d="M12 4.5a5 5 0 0 0-5 5v3.2L5.6 15.4c-.3.6.1 1.1.7 1.1h11.4c.6 0 1-.5.7-1.1L17 12.7V9.5a5 5 0 0 0-5-5z" fill="#fff"/><path d="M10 18a2 2 0 0 0 4 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><i>APP</i></span><div><div class="nb-h"><b>【秘密登記通道】</b></div><p>先搶先贏！單筆消費滿$3000送3%momo幣🎁唯你獨享兼唯一入口這邊走→</p></div></div><div class="nb" data-seg="win" data-i="0"><span class="nb-ic app" role="img" aria-label="APP 推播"><svg viewBox="0 0 24 24"><path d="M12 4.5a5 5 0 0 0-5 5v3.2L5.6 15.4c-.3.6.1 1.1.7 1.1h11.4c.6 0 1-.5.7-1.1L17 12.7V9.5a5 5 0 0 0-5-5z" fill="#fff"/><path d="M10 18a2 2 0 0 0 4 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><i>APP</i></span><div><div class="nb-h"><b>免襲警報❗免費紅包來襲</b></div><p>恭喜❗你被100元「新春大紅包」砸中啦🧧點開幸運一整年，限時有效>></p></div></div><div class="nb" data-seg="win" data-i="1"><span class="nb-ic app" role="img" aria-label="APP 推播"><svg viewBox="0 0 24 24"><path d="M12 4.5a5 5 0 0 0-5 5v3.2L5.6 15.4c-.3.6.1 1.1.7 1.1h11.4c.6 0 1-.5.7-1.1L17 12.7V9.5a5 5 0 0 0-5-5z" fill="#fff"/><path d="M10 18a2 2 0 0 0 4 0" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg><i>APP</i></span><div><div class="nb-h"><b>這一天來得太快…⚡</b></div><p>$100紅包和假日咪一下就快沒了！把握優惠尾聲，享受片刻購物趣→</p></div></div><div class="nb" data-seg="win" data-i="2"><span class="nb-ic sms" role="img" aria-label="簡訊"><svg viewBox="0 0 24 24"><path d="M12 5c-4.7 0-8 2.8-8 6.2 0 1.9 1 3.5 2.6 4.6L6 19l3.4-1.6c.8.2 1.7.3 2.6.3 4.7 0 8-2.8 8-6.3S16.7 5 12 5z" fill="#fff"/></svg><i>SMS</i></span><div><p>【momo 系統通知】您有$100「開春大紅包」剩1天效期！逾期不補發，限定會員優惠請立即確認</p></div></div><div class="nb" data-seg="reach" data-i="0"><span class="nb-ic sms" role="img" aria-label="簡訊"><svg viewBox="0 0 24 24"><path d="M12 5c-4.7 0-8 2.8-8 6.2 0 1.9 1 3.5 2.6 4.6L6 19l3.4-1.6c.8.2 1.7.3 2.6.3 4.7 0 8-2.8 8-6.3S16.7 5 12 5z" fill="#fff"/></svg><i>SMS</i></span><div><p>momo會員您好，邀請您花三分鐘填問卷幫助優化服務，11/28前完成贈$200mo幣，轉發無效</p></div></div></div></div>
     </div>
-    <div class="nextprev"><a href="#journey">← 上一個作品<b>01 自動旅程腳本企劃</b></a><a href="#app">下一個作品 →<b>03 APP 下載媒體策略</b></a></div>
+    <div class="nextprev"><a href="#journey">← 上一個作品<b>01 自動旅程腳本企劃</b></a><a href="#app">下一個作品 →<b>03 APP 下載媒體企劃</b></a></div>
   </div>
 </main>
 
@@ -789,15 +806,15 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
       </div>
       <div class="blt L" style="left:17.273%;top:21.591%;width:15.909%;--col:#7A3B12" data-st="購買"><h4>促進參與</h4><ul><li>站內搜尋再行銷</li><li>追蹤商品降價通知</li><li>購物車未結再行銷</li></ul></div>
 <div class="blt L" style="left:9.545%;top:45.000%;width:15.000%;--col:#A8693D" data-st="註冊"><h4>新客首購</h4><ul><li>註冊斷點提醒</li><li>首購通知</li></ul></div>
-<div class="blt L" style="left:20.909%;top:74.432%;width:13.636%;--col:#CDA27F" data-st="下載"><h4>新客歡迎</h4><ul><li>APP 訪客歡迎</li></ul></div>
+<div class="blt L" style="left:20.909%;top:74.432%;width:13.636%;--col:#CDA27F" data-st="下載"><h4>新客歡迎</h4><ul><li>APP 訪客歡迎蓋板</li></ul></div>
 <div class="blt R" style="left:67.273%;top:21.591%;width:13.636%;--col:#0D4A80" data-st="沉睡"><h4>流失挽回</h4></div>
 <div class="blt R" style="left:75.455%;top:46.136%;width:14.545%;--col:#1679BF" data-st="回購"><h4>促進回購</h4><ul><li>NES 回購提醒</li></ul></div>
 <div class="blt R" style="left:67.273%;top:72.727%;width:14.545%;--col:#3FB2E0" data-st="忠誠"><h4>關係維繫</h4><ul><li>mo幣歸戶通知</li><li>mo幣到期提醒</li><li>生日通知</li></ul></div>
 <div class="ntc" style="left:11.136%;top:2.727%;width:22.273%;height:11.818%" data-st="購買"><div class="ntc-h"><span class="ntc-ch" style="background:#7A3B12">購買・推播</span><b>追蹤商品降價通知</b></div><p>您追蹤的【NEW BALANCE】NB 復古休閒鞋…現正降價中！馬上用優惠價 $2300 帶它回家 →</p></div><div class="ntc" style="left:38.864%;top:2.727%;width:22.273%;height:11.818%" data-st="購買"><div class="ntc-h"><span class="ntc-ch" style="background:#7A3B12">購買・推播</span><b>購物車商品通知</b></div><p>您剛剛加入購物車的【奧莉薇閣】28 吋行李箱…正在熱銷中！喜歡就不要猶豫！</p></div><div class="ntc" style="left:66.591%;top:2.727%;width:22.273%;height:11.818%" data-st="回購"><div class="ntc-h"><span class="ntc-ch" style="background:#1679BF">回購・簡訊</span><b>momo 溫馨提醒</b></div><p>【momo 溫馨提醒】手邊的衛生紙是不是快沒了？快趁雙 11 購物節補貨，確保庫存不緊張！GO→</p></div><div class="ntc" style="left:38.864%;top:85.455%;width:22.273%;height:11.818%" data-st="註冊"><div class="ntc-h"><span class="ntc-ch" style="background:#A8693D">註冊・簡訊</span><b>momo 新客專屬</b></div><p>【momo】新客專屬 $1 大杯星巴克，$1 麥當勞套餐，各大速食餐券只要 $1！限首次消費會員購買 →</p></div><div class="ntc" style="left:11.136%;top:85.455%;width:22.273%;height:11.818%" data-st="註冊"><div class="ntc-h"><span class="ntc-ch" style="background:#A8693D">註冊・推播</span><b>註冊未完成通知</b></div><p>加油！成為 momo 會員只差這小小一步，期待與您一起打造生活大小事 →</p></div><div class="ntc" style="left:66.591%;top:85.455%;width:22.273%;height:11.818%" data-st="忠誠"><div class="ntc-h"><span class="ntc-ch" style="background:#3FB2E0">忠誠・推播</span><b>謝小姐，生日快樂！</b></div><p>金牛座務實有品味，來 momo 兩者兼備 ★壽星獨享生日禮包，點我立即使用 →</p></div>
-      <div class="jm-list"><div class="jm" style="--col:#CDA27F" data-st="下載"><b>下載｜新客歡迎</b><ul><li>APP 訪客歡迎</li></ul></div><div class="jm" style="--col:#A8693D" data-st="註冊"><b>註冊｜新客首購</b><ul><li>註冊斷點提醒</li><li>首購通知</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#A8693D">註冊・簡訊</span><b>momo 新客專屬</b></div><p>【momo】新客專屬 $1 大杯星巴克，$1 麥當勞套餐，各大速食餐券只要 $1！限首次消費會員購買 →</p></div><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#A8693D">註冊・推播</span><b>註冊未完成通知</b></div><p>加油！成為 momo 會員只差這小小一步，期待與您一起打造生活大小事 →</p></div></div><div class="jm" style="--col:#7A3B12" data-st="購買"><b>購買｜促進參與</b><ul><li>站內搜尋再行銷</li><li>追蹤商品降價通知</li><li>購物車未結再行銷</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#7A3B12">購買・推播</span><b>追蹤商品降價通知</b></div><p>您追蹤的【NEW BALANCE】NB 復古休閒鞋…現正降價中！馬上用優惠價 $2300 帶它回家 →</p></div><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#7A3B12">購買・推播</span><b>購物車商品通知</b></div><p>您剛剛加入購物車的【奧莉薇閣】28 吋行李箱…正在熱銷中！喜歡就不要猶豫！</p></div></div><div class="jm" style="--col:#1679BF" data-st="回購"><b>回購｜促進回購</b><ul><li>NES 回購提醒</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#1679BF">回購・簡訊</span><b>momo 溫馨提醒</b></div><p>【momo 溫馨提醒】手邊的衛生紙是不是快沒了？快趁雙 11 購物節補貨，確保庫存不緊張！GO→</p></div></div><div class="jm" style="--col:#3FB2E0" data-st="忠誠"><b>忠誠｜關係維繫</b><ul><li>mo幣歸戶通知</li><li>mo幣到期提醒</li><li>生日通知</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#3FB2E0">忠誠・推播</span><b>謝小姐，生日快樂！</b></div><p>金牛座務實有品味，來 momo 兩者兼備 ★壽星獨享生日禮包，點我立即使用 →</p></div></div></div>
+      <div class="jm-list"><div class="jm" style="--col:#CDA27F" data-st="下載"><b>下載｜新客歡迎</b><ul><li>APP 訪客歡迎蓋板</li></ul></div><div class="jm" style="--col:#A8693D" data-st="註冊"><b>註冊｜新客首購</b><ul><li>註冊斷點提醒</li><li>首購通知</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#A8693D">註冊・簡訊</span><b>momo 新客專屬</b></div><p>【momo】新客專屬 $1 大杯星巴克，$1 麥當勞套餐，各大速食餐券只要 $1！限首次消費會員購買 →</p></div><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#A8693D">註冊・推播</span><b>註冊未完成通知</b></div><p>加油！成為 momo 會員只差這小小一步，期待與您一起打造生活大小事 →</p></div></div><div class="jm" style="--col:#7A3B12" data-st="購買"><b>購買｜促進參與</b><ul><li>站內搜尋再行銷</li><li>追蹤商品降價通知</li><li>購物車未結再行銷</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#7A3B12">購買・推播</span><b>追蹤商品降價通知</b></div><p>您追蹤的【NEW BALANCE】NB 復古休閒鞋…現正降價中！馬上用優惠價 $2300 帶它回家 →</p></div><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#7A3B12">購買・推播</span><b>購物車商品通知</b></div><p>您剛剛加入購物車的【奧莉薇閣】28 吋行李箱…正在熱銷中！喜歡就不要猶豫！</p></div></div><div class="jm" style="--col:#1679BF" data-st="回購"><b>回購｜促進回購</b><ul><li>NES 回購提醒</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#1679BF">回購・簡訊</span><b>momo 溫馨提醒</b></div><p>【momo 溫馨提醒】手邊的衛生紙是不是快沒了？快趁雙 11 購物節補貨，確保庫存不緊張！GO→</p></div></div><div class="jm" style="--col:#3FB2E0" data-st="忠誠"><b>忠誠｜關係維繫</b><ul><li>mo幣歸戶通知</li><li>mo幣到期提醒</li><li>生日通知</li></ul><div class="ntc"><div class="ntc-h"><span class="ntc-ch" style="background:#3FB2E0">忠誠・推播</span><b>謝小姐，生日快樂！</b></div><p>金牛座務實有品味，來 momo 兩者兼備 ★壽星獨享生日禮包，點我立即使用 →</p></div></div></div>
     </div>
 
-    <div class="nextprev"><a href="#home">← 回到首頁<b>作品總覽</b></a><a href="#activation">下一個作品 →<b>02 會員活化操作</b></a></div>
+    <div class="nextprev"><a href="#home">← 回到首頁<b>作品總覽</b></a><a href="#activation">下一個作品 →<b>02 分眾行銷操作</b></a></div>
   </div>
 </main>
 
@@ -840,7 +857,7 @@ mask:radial-gradient(circle at 0 50%,transparent 7px,#000 7.5px),radial-gradient
       clearInterval(nbTimer); nbI=0;
       if(!list.length) return;
       list[0].classList.add('show');
-      if(list.length>1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      if(list.length>1){
         nbTimer=setInterval(function(){list[nbI].classList.remove('show');nbI=(nbI+1)%list.length;list[nbI].classList.add('show');},4200);
       }
     }
@@ -862,5 +879,5 @@ function pick(st){var mobile=window.matchMedia('(max-width:1120px)').matches;
  cyc.querySelectorAll('[data-st="'+st+'"]').forEach(function(e){e.classList.add('on')});}
 cyc.querySelectorAll('.cnode').forEach(function(n){n.addEventListener('click',function(e){e.stopPropagation();pick(n.dataset.st)});n.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(n.dataset.st)}})});
 cyc.addEventListener('click',function(e){if(!e.target.closest('.cnode')&&cyc.classList.contains('pick')){cyc.classList.remove('pick');cyc.querySelectorAll('.on').forEach(function(x){x.classList.remove('on')})}});
-})();</script></body>
+})();</script><script>document.querySelectorAll("a.lang").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();location.href=a.getAttribute("href")+(location.hash||"")})})</script></body>
 </html>
